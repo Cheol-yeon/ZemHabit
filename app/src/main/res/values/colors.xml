@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="transparent">#00000000</color>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+
+    <color name="waitingProgress">#009999</color>
+    <color name="waitingProgressBackground">#CBEBEA</color>
+
+    <color name="proceedProgress">#60A179</color>
+    <color name="proceedProgressBackground">#EAF9F2</color>
+
+    <color name="editProgress">#b573c5</color>
+    <color name="editProgressBackground">#fbf0fe</color>
+
+    <color name="disableButton">#19000000</color>
+
+    <color name="completionSubmitBackground">#60398e</color>
+    <color name="completionBackground">#fbf8ff</color>
+    <color name="completionTextColor">#7578bf</color>
+
+    <color name="dayPressed">#60398e</color>
+
+    <color name="daySelected">#60398e</color>
+    <color name="daySelectedTextColor">@android:color/white</color>
+
+    <color name="dayDeselected">#FAFAFA</color>
+    <color name="dayDeselectedTextColor">#80000000</color>
+
+    <color name="daySelectedAndDisabled">#43444F</color>
+    <color name="daySelectedAndDisabledTextColor">@color/daySelectedTextColor</color>
+
+    <color name="dayDeselectedAndDisabled">@color/dayDeselected</color>
+    <color name="dayDeselectedAndDisabledTextColor">@android:color/darker_gray</color>
+</resources>

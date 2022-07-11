@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    android:background="@color/white"
+    tools:context=".Fragment.SetHabitFragment"
+    android:id="@+id/cl_settingParent">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/ll_settingTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toTopOf="@id/scroll"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.utils.widget.ImageFilterView
+            android:id="@+id/iv_settingIcon"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:src="@drawable/health_icon" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_settingTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="5dp"
+            android:fontFamily="@font/noto_sans_bold"
+            android:text="건강한 몸"
+            android:textColor="@color/black"
+            android:textSize="24sp" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:paddingBottom="10dp"
+        app:layout_constraintBottom_toTopOf="@id/ll_button"
+        app:layout_constraintTop_toBottomOf="@id/ll_settingTitle">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_setHabit"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="10dp">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.5" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.25" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.75" />
+
+            <TextView
+                android:id="@+id/tv_habitName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/noto_sans_regular"
+                android:text="습관 이름"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!--            android:padding="10dp"-->
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_habitName2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/roboto_regular"
+                android:text="한글책 읽기"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_habitName" />
+
+            <EditText
+                android:id="@+id/et_habitName"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/editview_round"
+                android:fontFamily="@font/roboto_regular"
+                android:inputType="text"
+                android:paddingStart="10dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="10dp"
+                android:selectAllOnFocus="true"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:theme="@style/EditTextTheme"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_habitName" />
+
+            <TextView
+                android:id="@+id/tv_setDuration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/noto_sans_regular"
+                android:text="기간 설정"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/et_habitName" />
+
+
+            <!--            app:layout_constraintBaseline_toBaselineOf="@id/textView9"-->
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_startDate"
+                android:layout_width="0dp"
+                android:layout_height="46dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/editview_round"
+                android:fontFamily="@font/roboto_regular"
+                android:gravity="center_vertical"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toStartOf="@id/tv_wave"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_setDuration" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_wave"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:fontFamily="@font/roboto_bold"
+                android:text="~"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@id/tv_startDate"
+                app:layout_constraintEnd_toStartOf="@id/tv_endDate"
+                app:layout_constraintStart_toEndOf="@id/tv_startDate"
+                app:layout_constraintTop_toTopOf="@id/tv_startDate" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_endDate"
+                android:layout_width="0dp"
+                android:layout_height="46dp"
+                android:background="@drawable/editview_round"
+                android:fontFamily="@font/roboto_regular"
+                android:gravity="center_vertical"
+                android:paddingStart="10dp"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/tv_wave"
+                app:layout_constraintTop_toTopOf="@id/tv_startDate" />
+
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_endDate">
+
+                <RadioButton
+                    android:id="@+id/rb_7days"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_radio_button1"
+                    android:button="@null"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="7일"
+                    android:textAlignment="center"
+                    android:textColor="@drawable/selector_radio_text"
+                    android:textSize="18sp" />
+
+                <RadioButton
+                    android:id="@+id/rb_14days"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_radio_button2"
+                    android:button="@null"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="14일"
+                    android:textAlignment="center"
+                    android:textColor="@drawable/selector_radio_text"
+                    android:textSize="18sp" />
+
+                <RadioButton
+                    android:id="@+id/rb_30days"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_radio_button2"
+                    android:button="@null"
+                    android:checked="true"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="30일"
+                    android:textAlignment="center"
+                    android:textColor="@drawable/selector_radio_text"
+                    android:textSize="18sp" />
+
+                <RadioButton
+                    android:id="@+id/rb_100days"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_radio_button3"
+                    android:button="@null"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="100일"
+                    android:textAlignment="center"
+                    android:textColor="@drawable/selector_radio_text"
+                    android:textSize="18sp" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/tv_setDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="70dp"
+                android:fontFamily="@font/noto_sans_regular"
+                android:text="요일 설정"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/tv_setDateText"
+                app:layout_constraintEnd_toStartOf="@id/tv_setDateText"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tv_setDateText" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_setDateText"
+                android:layout_width="0dp"
+                android:layout_height="46dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/editview_round"
+                android:fontFamily="@font/noto_sans_regular"
+                android:gravity="center_vertical"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:text="매일"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/tv_setDate"
+                app:layout_constraintTop_toBottomOf="@id/radioGroup" />
+
+            <TextView
+                android:id="@+id/tv_setAlarm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/noto_sans_regular"
+                android:text="알림 설정"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_setDateText" />
+
+            <!--            <ToggleButton-->
+            <!--                android:id="@+id/btn_toggle"-->
+            <!--                android:layout_width="50dp"-->
+            <!--                android:layout_height="30dp"-->
+            <!--                android:layout_marginTop="30dp"-->
+            <!--                android:background="@drawable/toggle_selector"-->
+            <!--                android:checked="false"-->
+            <!--                android:text=""-->
+            <!--                android:textOff=""-->
+            <!--                android:textOn=""-->
+            <!--                app:layout_constraintBottom_toBottomOf="@id/tv_setAlarm"-->
+            <!--                app:layout_constraintEnd_toEndOf="parent"-->
+            <!--                app:layout_constraintTop_toBottomOf="@id/et_setDateText" />-->
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switch_alarm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:thumb="@drawable/thumb_selector"
+                app:layout_constraintBaseline_toBaselineOf="@id/tv_setAlarm"
+                app:layout_constraintBottom_toBottomOf="@id/tv_setAlarm"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:track="@drawable/track_selector" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_alarmText"
+                android:layout_width="0dp"
+                android:layout_height="46dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/editview_round"
+                android:fontFamily="@font/noto_sans_regular"
+                android:gravity="center_vertical"
+                android:paddingStart="10dp"
+                android:text="없음"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_setAlarm" />
+
+            <TextView
+                android:id="@+id/tv_zemcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/noto_sans_regular"
+                android:text="1회당 잼콘 설정"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_alarmText" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_giveZemconCount"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="5dp"
+                android:background="@drawable/editview_round"
+                android:fontFamily="@font/roboto_regular"
+                android:gravity="center"
+                android:text="5"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@id/btn_plus"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toEndOf="@id/btn_minus"
+                app:layout_constraintTop_toBottomOf="@id/tv_zemcon" />
+
+            <androidx.constraintlayout.utils.widget.ImageFilterView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="30dp"
+                android:src="@drawable/zemcon_icon"
+                app:layout_constraintBottom_toBottomOf="@id/tv_giveZemconCount"
+                app:layout_constraintStart_toStartOf="@id/tv_giveZemconCount"
+                app:layout_constraintTop_toTopOf="@id/tv_giveZemconCount" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_minus"
+                android:layout_width="50dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="2dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/plus_minus_button"
+                android:fontFamily="@font/roboto_bold"
+                android:gravity="center"
+                android:text="－"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toBottomOf="@id/tv_giveZemconCount"
+                app:layout_constraintEnd_toStartOf="@id/tv_giveZemconCount"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tv_giveZemconCount" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_plus"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/plus_minus_button"
+                android:fontFamily="@font/roboto_bold"
+                android:gravity="center"
+                android:text="＋"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toBottomOf="@id/btn_minus"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/tv_giveZemconCount"
+                app:layout_constraintTop_toTopOf="@id/btn_minus" />
+
+            <TextView
+                android:id="@+id/tv_zemconRemark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="30dp"
+                android:fontFamily="@font/roboto_regular"
+                android:text="빠짐없이 한다면,30회 x 10잼콘 = 최대 300잼콘"
+                android:textColor="#80000000"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btn_minus" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/ll_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/scroll">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_habitCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/datepicker_cancel"
+            android:fontFamily="@font/noto_sans_bold"
+            android:text="취소"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_habitSubmit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/submit_selector"
+            android:fontFamily="@font/noto_sans_bold"
+            android:text="등록"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

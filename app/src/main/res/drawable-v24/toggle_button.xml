@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:exitFadeDuration="@android:integer/config_shortAnimTime">
+
+    <item android:state_pressed="true">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/dayPressed" />
+        </shape>
+    </item>
+
+    <item
+        android:state_checked="true"
+        android:state_enabled="true">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/daySelected" />
+        </shape>
+    </item>
+
+    <item
+        android:state_checked="true"
+        android:state_enabled="false">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/daySelectedAndDisabled" />
+        </shape>
+    </item>
+
+    <item
+        android:state_checked="false"
+        android:state_enabled="true">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/dayDeselected" />
+        </shape>
+    </item>
+
+    <item
+        android:state_checked="false"
+        android:state_enabled="false">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/dayDeselectedAndDisabled" />
+        </shape>
+    </item>
+
+</selector>

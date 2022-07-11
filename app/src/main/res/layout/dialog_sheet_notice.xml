@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/dialog_shape"
+    android:orientation="vertical"
+    android:paddingHorizontal="20dp"
+    android:paddingVertical="10dp">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="안내"
+        android:layout_gravity="center"
+        android:paddingVertical="20dp"
+        android:textSize="24sp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/roboto_bold"
+        />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="오늘 이전으로 설정할 수 없어요."
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:fontFamily="@font/noto_sans_regular"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_submit2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/datepicker_submit"
+            android:text="확인"
+            android:fontFamily="@font/noto_sans_bold"
+            android:textSize="20sp"
+            android:textColor="@color/white" />
+
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme.NumberPicker" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:textSize">30sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="fontFamily">noto_sans_bold</item>
+    </style>
+    <style name="MaterialDayPickerToggle" parent="@style/Widget.AppCompat.Button.Borderless">
+        <item name="android:layout_width">@dimen/day_button_size</item>
+        <item name="android:layout_height">@dimen/day_button_size</item>
+        <item name="android:background">@drawable/toggle_button_left</item>
+        <item name="android:textSize">@dimen/day_button_max_font_size</item>
+        <item name="android:textColor">@color/circle_toggle_button_text_color</item>
+        <item name="fontFamily">@font/roboto_bold</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+    <style name="MaterialDayPickerToggle2" parent="@style/Widget.AppCompat.Button.Borderless">
+        <item name="android:layout_width">@dimen/day_button_size</item>
+        <item name="android:layout_height">@dimen/day_button_size</item>
+        <item name="android:background">@drawable/toggle_button</item>
+        <item name="android:textSize">@dimen/day_button_max_font_size</item>
+        <item name="android:textColor">@color/circle_toggle_button_text_color</item>
+        <item name="fontFamily">@font/roboto_bold</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+    <style name="MaterialDayPickerToggle3" parent="@style/Widget.AppCompat.Button.Borderless">
+        <item name="android:layout_width">@dimen/day_button_size</item>
+        <item name="android:layout_height">@dimen/day_button_size</item>
+        <item name="android:background">@drawable/toggle_button_right</item>
+        <item name="android:textSize">@dimen/day_button_max_font_size</item>
+        <item name="android:textColor">@color/circle_toggle_button_text_color</item>
+        <item name="fontFamily">@font/roboto_bold</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+    <style name="MaterialDayPickerToggle4" parent="@style/Widget.AppCompat.Button.Borderless">
+        <item name="android:layout_width">@dimen/day_button_size</item>
+        <item name="android:layout_height">@dimen/day_button_size</item>
+        <item name="android:background">@drawable/toggle_button_all</item>
+        <item name="android:textSize">@dimen/day_button_max_font_size</item>
+        <item name="android:textColor">@color/circle_toggle_button_text_color</item>
+        <item name="fontFamily">@font/roboto_bold</item>
+    </style>
+    <style name="EditTextTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorControlNormal">@null</item>
+        <item name="colorControlActivated">#60398e</item>
+        <item name="colorControlHighlight">#60398e</item>
+    </style>
+</resources>

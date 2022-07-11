@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/menu_zemTalk"
+        android:title="search"
+        android:icon="@drawable/zemtalk"
+        app:showAsAction="always"
+        />
+        <item
+            android:id="@+id/menu_notice"
+            android:title="account"
+            android:icon="@drawable/notice"
+            app:showAsAction="always"
+            />
+        <item
+            android:id="@+id/menu_profile"
+            android:title="logout"
+            android:icon="@drawable/profile"
+            app:showAsAction="always"
+            />
+</menu>

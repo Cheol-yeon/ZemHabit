@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/dialog_shape"
+    android:orientation="vertical"
+    android:paddingHorizontal="20dp"
+    android:paddingVertical="10dp">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="요일 선택"
+        android:layout_gravity="center"
+        android:paddingVertical="20dp"
+        android:textSize="24sp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/roboto_bold"
+        />
+
+    <com.example.zemhabit.DayPicker.MaterialDayPicker
+        android:id="@+id/dp_doy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+    <ToggleButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/toggle_all"
+        style="@style/MaterialDayPickerToggle4"
+        android:layout_marginTop="20dp"
+        android:textOff="매일"
+        android:textOn="매일"
+        />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/datepicker_cancel"
+            android:text="취소"
+            android:fontFamily="@font/noto_sans_bold"
+            android:textSize="20sp"
+            android:textColor="@color/black" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/datepicker_submit"
+            android:text="확인"
+            android:fontFamily="@font/noto_sans_bold"
+            android:textSize="20sp"
+            android:textColor="@color/white" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

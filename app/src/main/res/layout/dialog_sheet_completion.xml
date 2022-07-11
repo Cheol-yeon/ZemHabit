@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/dialog_shape"
+    android:orientation="vertical"
+    android:paddingHorizontal="20dp"
+    android:paddingVertical="10dp" >
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="잼콘 지급"
+        android:layout_gravity="center"
+        android:paddingVertical="20dp"
+        android:textSize="24sp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/roboto_bold"
+        />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="vertical"
+        >
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_noticeContent1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="아이에게 1가지 습관의"
+            android:gravity="center_horizontal"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:fontFamily="@font/noto_sans_regular"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_noticeContent2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="XX잼콘을 지급할까요?"
+            android:gravity="center_horizontal"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:fontFamily="@font/noto_sans_regular"
+            android:layout_gravity="center_horizontal"
+            />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_completionContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="\u0027약속모드 1시간 아껴 쓰기\u0027"
+        android:gravity="center_horizontal"
+        android:textSize="18sp"
+        android:fontFamily="@font/noto_sans_regular"
+        android:textColor="@color/black"
+        android:layout_marginVertical="5dp"
+        android:padding="30dp"
+        android:background="@drawable/dialog_completion_content"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="칭찬과 함께 잼콘을 전달해 보세요."
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:fontFamily="@font/noto_sans_regular"
+        android:gravity="center_horizontal"
+        android:layout_marginVertical="5dp"
+        />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_compliment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="5dp"
+            android:overScrollMode="never"
+            app:layout_constraintHeight_max="200dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:paddingVertical="1dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/datepicker_cancel"
+            android:text="취소"
+            android:fontFamily="@font/noto_sans_bold"
+            android:textSize="20sp"
+            android:textColor="@color/black" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/datepicker_submit"
+            android:text="확인"
+            android:fontFamily="@font/noto_sans_bold"
+            android:textSize="20sp"
+            android:textColor="@color/white" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>
